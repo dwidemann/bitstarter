@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
     var indexString = fs.readFileSync(fn).toString();
     //var indexString = fs.readFileSync(fn).toString().split('\n');
     //response.send('Hello World 2!');
-    response.send(indexString[0]);
+    response.send(indexString);
 });
 
 
