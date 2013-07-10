@@ -4,7 +4,8 @@ var fn = "index.html";
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var indexString = fs.readFileSync(fn).toString().split('\n');
+    var indexString = fs.readFileSync(fn).toString();
+    //var indexString = fs.readFileSync(fn).toString().split('\n');
     //response.send('Hello World 2!');
     response.send(indexString[0]);
 });
